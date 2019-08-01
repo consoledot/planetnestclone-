@@ -1,0 +1,21 @@
+{
+  "name": "planet-nest",
+  "version": "1.0.0",
+  "description": "Planet Nest Official website designed by me",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.12.0",
+    "particlesjs": "^2.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w scss/ -o assests/css --recursive"
+  },
+  "keywords": [
+    "Nest",
+    "Planet",
+    "nest"
+  ],
+  "author": "Abimbola Oladele",
+  "license": "MIT"
+}

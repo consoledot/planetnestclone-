@@ -1,0 +1,174 @@
+@include MediaMd {
+    .head {
+        .header-info {
+            h1 {
+                text-align: right;
+                font-size: 40px;
+                padding-right: 25px;
+            }
+        }
+    }
+
+    nav {
+        #list {
+            flex-direction: column;
+
+            .head-menu {
+                img {
+                    margin-left: 20px;
+                }
+
+                #menu {
+                    display: block;
+                    margin-right: 20px;
+                    cursor: pointer;
+
+                }
+
+                .show {
+                    div {
+                        &:nth-child(1) {
+                            transform: translate(10px) rotate(45deg);
+                        }
+
+                        &:nth-child(2) {
+                            transform: translateY(5px)translateX(5px);
+
+                        }
+
+                        &:nth-child(3) {
+                            transform: translateY(-20px) translateX(10px) rotate(-45deg);
+                            width: 25px;
+                        }
+                    }
+
+
+
+
+
+                }
+            }
+
+            #center li,
+            .btn {
+
+                display: none;
+                @include easeOut;
+
+            }
+
+            &.show {
+                @include easeOut;
+
+                #center li,
+                .btn {
+
+                    display: block;
+                    text-align: center;
+                    margin-top: 40px;
+                    font-size: 20px;
+                    @include easeOut;
+                }
+
+                #center li {
+                    &:hover {
+                        background: lighten($primary-color, 40%);
+                    }
+                }
+            }
+        }
+    }
+
+    .learn {
+        .text {
+            padding: 60px 10px;
+        }
+
+        .tracks {
+            padding: 20px 0px;
+            grid-template-columns: 1fr;
+
+            .track {
+                text-align: center;
+                margin-top: 10px;
+                height: 300px;
+                padding-top: 5px;
+
+                h3 {
+                    margin-top: 30px
+                }
+
+                .start-learning {
+                    margin-top: 10px;
+                }
+
+                &.selected {
+                    height: 300px;
+                }
+
+                &:hover {
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    .believe {
+        padding: 60px 0 10px 0;
+
+        .part {
+            margin: 5px 5px;
+
+            h2 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 20px;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .divisions {
+        .division_list {
+            padding: 20px 0;
+            grid-template-columns: 1fr;
+
+
+        }
+    }
+
+    .companies {
+        .logo {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 30px 40px;
+        }
+    }
+
+    .ceo {
+        margin-bottom: 0;
+    }
+
+    .stats {
+        height: 600px;
+        margin-top: 0;
+        width: 100%;
+        grid-template-columns: 1fr;
+
+        &>* {
+            height: 200px;
+        }
+    }
+
+    .social {
+        grid-template-columns: 1fr;
+
+        .social2 {
+            display: none;
+        }
+    }
+}
